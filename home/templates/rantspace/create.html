@@ -1,0 +1,9 @@
+<div class="new-project">
+	<h>You must add an original drawing, an essay of minimum 500 words, and a video in order to start a project.</h>
+	<form action='{% url 'create' %}' id="new-form" method="POST">
+		{% csrf_token %}
+		<label for="{{ form.creator_handle.id_for_label }}">Optional: Twitter creator handle</label>
+		{{ form.creator_handle }}
+		<input type="submit" value="create project">
+	</form>
+</div>
